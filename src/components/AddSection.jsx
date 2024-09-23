@@ -11,7 +11,7 @@ export default function AddSection({addTodo}) {
   };
   return (
     <div className="w-7/12 mt-4 flex flex-col gap-12">
-      <div className='h-64  flex justify-center items-center' >
+      <div className='h-64 flex justify-center items-center' >
         <img className='object-cover h-full ' src={todoo} alt="" />
       </div>
       <form className='flex flex-col gap-2' onSubmit={handleSubmit}>
@@ -23,7 +23,7 @@ export default function AddSection({addTodo}) {
           onChange={(e) => setNewTask(e.target.value)}
           placeholder="Enter your task"
         />
-        <button type="submit" className="btn-add mt-2 bg-[#7AB2B2] w-40 py-4 rounded-md uppercase text-white font-bold">Add
+        <button type="submit" className=" bg-[#7AB2B2] w-40 py-4 rounded-md uppercase text-white font-bold">Add
         </button>
       </form>
     </div>
