@@ -49,7 +49,7 @@ export default function Container() {
   }
     
   return (
-    <div className='p-4 flex gap-5 h-full '>
+    <div className='p-4 flex flex-col lg:flex-row gap-5 h-full '>
       <TaskSection todos={todos} updateTodoStatus={updateTodoStatus} onEdit={editTodo} onDelete={deleteTodo}/>
       <AddSection addTodo ={addTodo}/>
     </div>

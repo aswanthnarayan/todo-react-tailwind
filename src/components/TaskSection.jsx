@@ -16,7 +16,7 @@ export default function TaskSection({ todos, updateTodoStatus ,onEdit,onDelete }
     if (filter === "pending") return !todo.completed;
     return true;
   });
-
+  
   const completedTodo = todos.filter((td)=>td.completed);
   const pendingTodo = todos.filter((td)=>!td.completed);
 
@@ -45,19 +45,20 @@ export default function TaskSection({ todos, updateTodoStatus ,onEdit,onDelete }
 
 
   return (
-    <div className="w-5/12 bg-[#EEF7FF] shadow-2xl p-2 h-[calc(100%-64px)] rounded-md">
+    <div className="w-full lg:w-5/12 bg-[#EEF7FF] shadow-2xl p-2 h-80 md:h-64 lg:h-[calc(100%-64px)] rounded-md">
       <div className="flex-col gap-5">
         {todos.length>0?<div className="flex justify-around py-2">
-          <FilterButton name="all" onClick={() => setFilter("all")} />
+          <FilterButton name="all" onClick={() => setFilter("all")} filter={filter} />
           <FilterButton
             name="completed"
             onClick={() => setFilter("completed")}
+            filter={filter} 
           />
-          <FilterButton name="pending" onClick={() => setFilter("pending")} />
+          <FilterButton name="pending" onClick={() => setFilter("pending")} filter={filter}  />
         </div>:""}
       </div>
 
-      <div className="scroll-section overflow-y-auto h-[calc(100%-60px)] mt-2 flex justify-center flex-wrap gap-12 ">
+      <div className="scroll-section overflow-y-auto h-64 md:h-48 lg:h-[calc(100%-60px)] mt-2 flex justify-center flex-wrap gap-12 ">
       {filteredTodo.length > 0 ? (
           filteredTodo.map((todo) => (
             <TodoItem
