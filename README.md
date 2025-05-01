@@ -6,7 +6,6 @@ Built a modernized note-taking application with React.js featuring a minimalist 
 ## Live Demo
 Check out the live application at [Done It Live](https://done-it-todo.netlify.app/).
 
-
 ## Installation
 1. Clone the repository:
    ```bash
